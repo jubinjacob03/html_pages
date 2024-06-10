@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="C:\bootstrap-5.0.2-dist\css\bootstrap.min.css" rel="stylesheet">
+    <title>Train Reservation System</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Arial, Bahnschrift;
+            background-color: grey;
+        }
+
+        .navbar {
+            background-color: #062A78;
+            color: white;
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            box-sizing: border-box;
+        }
+
+        .navbar img {
+            width: 100px;
+            height: 100px;
+        }
+
+
+        .nav-item {
+            margin: 10px;
+        }
+
+        .container {
+            width: 50%;
+            padding: 25px;
+            background-color: blue;
+            margin: auto;
+            border-radius: 10px;
+            color: white;
+        }
+
+        input[type=text],
+        input[type=password],
+        select,
+        input[type=date] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1.5px solid green;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: orange;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="irctc.png" alt="IRCTC Logo">
+        <p>Indian Railway Catering and Tourism Corporation</p>
+        <p>DD-MM-YY | TIME | ABOUT | CONTACT US</p>
+    </div>
+    <nav class="nav nav-pills nav-fill">
+        <li class="nav-item">
+            <a class="nav-link active" href="home.html">Book Tickets</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="registration.html">Registration</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="cancel.html">Cancel Tickets</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="booking.html">Booking History</a>
+        </li>
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center"><b>Train Reservation Booking</b></h1>
+        <form>
+            <div class="mb-3">
+                <input type="text" placeholder="FROM (ORIGIN)" name="from" required>
+            </div>
+            <div class="mb-3">
+                <input type="text" placeholder="TO (DESTINATION)" name="to" required>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">DATE (DD/MM/YY)*</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <div class="mb-3">
+                <label for="class" class="form-label">Select Class:</label>
+                <select id="class" name="class">
+                    <option value="ALL CLASSES" selected>ALL CLASSES</option>
+                    <option value="Anubhuti Class (EA)">Anubhuti Class (EA)</option>
+                    <option value="AC First Class (1A)">AC First Class (1A)</option>
+                    <option value="Exec. Chair Car (EC)">Exec. Chair Car (EC)</option>
+                    <option value="AC 2 Tier (2A)">AC 2 Tier (2A)</option>
+                    <option value="First Class (FC)">First Class (FC)</option>
+                    <option value="AC 3 Tier (3A)">AC 3 Tier (3A)</option>
+                    <option value="AC Car Chair (CC)">AC Car Chair (CC)</option>
+                    <option value="Sleeper Class (SL)">Sleeper Class (SL)</option>
+                    <option value="Second Sitting (2S)">Second Sitting (2S)</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="booking-type" class="form-label">Select Booking Type:</label>
+                <select id="booking-type" name="booking-type">
+                    <option value="GENERAL" selected>GENERAL</option>
+                    <option value="LADIES">LADIES</option>
+                    <option value="LOWER BERTH/SR.CITIZEN">LOWER BERTH/SR.CITIZEN</option>
+                    <option value="DIVYAANG">DIVYAANG</option>
+                    <option value="TATKAL">TATKAL</option>
+                    <option value="PREMIUM TATKAL">PREMIUM TATKAL</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="concession" value="Divyaang Concession" id="divyaang-concession">
+                    <label class="form-check-label" for="divyaang-concession">Divyaang Concession</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="concession" value="Railway Pass Concession" id="railway-pass-concession">
+                    <label class="form-check-label" for="railway-pass-concession">Railway Pass Concession</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="flexible-date" name="flexible-date">
+                    <label class="form-check-label" for="flexible-date">Flexible with Date</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="available-berth" name="available-berth">
+                    <label class="form-check-label" for="available-berth">Trains with Available Berth</label>
+                </div>
+            </div>
+            <div class="text-center">
+                <button type="submit">SEARCH TRAINS</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="C:\bootstrap-5.0.2-dist\css\bootstrap.min.css" rel="stylesheet" />
+    <title>Train Reservation System</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Arial, Bahnschrift;
+            background-color: grey;
+        }
+
+        .header {
+            width: 100%;
+            height: 100px;
+            border: 5px solid black;
+            background-color: #062A78;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            width: 90px;
+            height: 70px;
+            margin-right: 10px;
+        }
+
+        .header p {
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .header p span {
+            float: right;
+        }
+
+        .nav-item .nav-link.active {
+            background-color: lightblue;
+            color: black;
+        }
+
+        .form-container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=date] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid green;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: lightblue;
+            color: black;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="irctc.png" alt="IRCTC Logo">
+        <p>Indian Railway Catering and Tourism Corporation <span>DD-MM-YY | TIME | ABOUT | CONTACT US</span></p>
+    </div>
+    
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+            <a class="nav-link active" href="home.html">Book Tickets</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="registration.html">Registration</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="cancel.html">Cancel Tickets</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="booking.html">Booking History</a>
+        </li>
+    </ul>
+    
+    <div class="container form-container">
+        <h1 class="text-center"><b>Train Reservation</b></h1>
+        
+        <form>
+            <h3>1. Basic Details:</h3>
+            <ul>
+                <li>USERNAME: <input type="text" name="username" required></li>
+                <li>PASSWORD: <input type="password" name="password" required></li>
+                <li>CONFIRM PASSWORD: <input type="password" name="confirm_password" required></li>
+                <li>PREFERRED LANGUAGE: 
+                    <select name="language">
+                        <option value="ENGLISH">ENGLISH</option>
+                        <option value="हिन्दी">हिन्दी</option>
+                    </select>
+                </li>
+                <li>SECURITY QUESTION: 
+                    <select name="security_question">
+                        <option value="What is your Nick Name?">What is your Nick Name?</option>
+                        <option value="What is your first School Name?">What is your first School Name?</option>
+                        <option value="Where did you born?">Where were you born?</option>
+                        <option value="What is your dream phone?">What is your dream phone?</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    IF OTHERS, TYPE YOUR QUESTION: <input type="text" name="other_question">
+                </li>
+                <li>SECURITY ANSWER: <input type="text" name="security_answer" required></li>
+            </ul>
+            
+            <h3>2. Personal Details:</h3>
+            <ul>
+                <li>
+                    <input type="text" placeholder="First Name" name="first_name" required>
+                    <input type="text" placeholder="Middle Name" name="middle_name">
+                    <input type="text" placeholder="Last Name" name="last_name" required>
+                </li>
+                <li>Occupation:
+                    <select name="occupation">
+                        <option value="Public Sector">Public Sector</option>
+                        <option value="State Govt.">State Govt.</option>
+                        <option value="Central Govt.">Central Govt.</option>
+                        <option value="Private Sector">Private Sector</option>
+                        <option value="Professional">Professional</option>
+                        <option value="Self-Employed">Self-Employed</option>
+                        <option value="Student">Student</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    Date of Birth: <input type="date" name="dob" required>
+                </li>
+                <li>MARRIAGE STATUS:
+                    <input type="radio" name="marriage_status" value="Married"> Married
+                    <input type="radio" name="marriage_status" value="Not Married"> Not Married
+                </li>
+                <li>Country:
+                    <select name="country">
+                        <option value="INDIA">INDIA</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    IF OTHERS, PLEASE ENTER YOUR COUNTRY'S NAME: <input type="text" name="other_country">
+                </li>
+                <li>Gender:
+                    <select name="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Transgender">Transgender</option>
+                    </select>
+                </li>
+                <li>
+                    Mobile No.: <input type="text" placeholder="Mobile Number" name="mobile_number" required>
+                </li>
+                <li>Nationality: <input type="text" name="nationality" required></li>
+            </ul>
+            
+            <h3>3. Address:</h3>
+            <ul>
+                <li><input type="text" placeholder="Flat/Door/Block No." name="flat_no" required></li>
+                <li><input type="text" placeholder="Street/Lane" name="street" required></li>
+                <li><input type="text" placeholder="Area/Locality" name="area" required></li>
+                <li><input type="text" placeholder="Pincode" name="pincode" required></li>
+                <li><input type="text" placeholder="State" name="state" required></li>
+                <li>
+                    City:
+                    <select name="city">
+                        <option value="Select City">Select City</option>
+                    </select>
+                </li>
+                <li>
+                    Post Office:
+                    <select name="post_office">
+                        <option value="Select a Postoffice">Select a Postoffice</option>
+                    </select>
+                </li>
+                <li><input type="text" placeholder="Phone" name="phone" required></li>
+                <li>Copy Residence to office Address:
+                    <input type="radio" name="copy_address" value="Yes"> Yes
+                    <input type="radio" name="copy_address" value="No"> No
+                </li>
+                <li>
+                    <input type="checkbox" name="credit_card_info" checked> Please inform me about IRCTC Co-branded credit card through Phone/Email/SMS (Optional)
+                </li>
+                <li>
+                    CAPTCHA: <input type="text" placeholder="CAPTCHA" name="captcha" readonly value="CAPTCHA">
+                    Enter the above CAPTCHA: <input type="text" name="captcha_entry" required>
+                </li>
+                <li>
+                    <input type="checkbox" name="terms_conditions"> I have read and agree with the Terms and Conditions. and also agree to receive promotional emails/SMS/offers/announcements from IRCTC & associated partners
+                </li>
+            </ul>
+            
+            <button type="submit">REGISTER</button>
+            <button type="button" class="cancelbtn">Cancel</button>
+        </form>
+    </div>
+</body>
+
+</html>

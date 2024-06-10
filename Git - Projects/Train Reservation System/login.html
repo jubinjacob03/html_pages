@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="C:\bootstrap-5.0.2-dist\css\bootstrap.min.css" rel="stylesheet" />
+    <title>Train Reservation System</title>
+    <style>
+        body {
+            font-family: Calibri, Arial, Bahnschrift;
+            background-color: grey;
+        }
+
+        .navbar-custom {
+            background-color: #062A78;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 5px solid black;
+        }
+
+        .navbar-custom img {
+            width: 90px;
+            height: 70px;
+        }
+
+        .navbar-custom p {
+            margin: 0;
+        }
+
+        .nav-pills .nav-link {
+            border-radius: 5px;
+            margin: 0 10px;
+            background-color: lightblue;
+            color: black;
+            font-weight: bold;
+        }
+
+        .nav-pills .nav-link:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .container-custom {
+            width: 50%;
+            padding: 25px;
+            background-color: white;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1.5px solid orange;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: lightblue;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        button:hover {
+            opacity: 0.7;
+        }
+
+        .cancelbtn {
+            width: 100%;
+            padding: 12px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .alert-updates {
+            background-color: #f8d7da;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            color: #721c24;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar-custom">
+        <img src="irctc.png" alt="IRCTC Logo">
+        <p>Indian Railway Catering and Tourism Corporation</p>
+        <p>DD-MM-YY | TIME | ABOUT | CONTACT US</p>
+    </div>
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+            <a class="nav-link" href="home.html">Book Tickets</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="registration.html">Registration</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="cancel.html">Cancel Tickets</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="booking.html">Booking History</a>
+        </li>
+    </ul>
+
+    <div class="container-custom">
+        
+            <h1><b>Train Reservation</b></h1>
+            <form>
+                <div class="mb-3">
+                    <label for="username" class="form-label">USERNAME:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter Username" required style="text-align:center">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">PASSWORD:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" required style="text-align:center">
+                </div>
+                <div class="mb-3">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" style="width:200px">Login</button>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rememberMe" name="rememberMe" checked>
+                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                </div>
+                <button type="button" class="cancelbtn">Cancel</button>
+            </form>
+        
+        <hr>
+        <h3><u>ALERTS & UPDATES:</u></h3>
+        <div class="alert-updates">
+            <ul>
+                <li>Here you will get alerts about the cancelled & diverted trains and updates regarding the new timings of Tatkal bookings, new circulars, etc.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
